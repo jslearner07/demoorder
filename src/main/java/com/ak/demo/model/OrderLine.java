@@ -45,26 +45,32 @@ public class OrderLine implements Serializable {
     
     @Transient
     @JsonSerialize
+    @JsonDeserialize
     private String bookName;
     
     @Transient
     @JsonSerialize
+    @JsonDeserialize
     private Integer bookVersion;
 
     @Transient
     @JsonSerialize
+    @JsonDeserialize
     private String bookIsbn;
 
     @Transient
     @JsonSerialize
+    @JsonDeserialize
     private String bookAuthor;
     
     @Transient
     @JsonSerialize
+    @JsonDeserialize
     private String bookDescription;
 
     @Transient
     @JsonSerialize
+    @JsonDeserialize
     private Float bookPrice;
     
     @Column(name = "CREATION_DATE", updatable = false)
