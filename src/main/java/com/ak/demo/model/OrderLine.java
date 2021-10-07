@@ -16,8 +16,9 @@ import javax.persistence.Transient;
 import javax.persistence.Version;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
 @Table(name = "PURCHASE_ORDERLINE")
@@ -45,31 +46,37 @@ public class OrderLine implements Serializable {
     private Order order;
     
     @Transient
+    @JsonInclude
     @JsonSerialize
     @JsonDeserialize
     private String bookName;
     
     @Transient
+    @JsonInclude
     @JsonSerialize
     @JsonDeserialize
     private Integer bookVersion;
 
     @Transient
+    @JsonInclude
     @JsonSerialize
     @JsonDeserialize
     private String bookIsbn;
 
     @Transient
+    @JsonInclude
     @JsonSerialize
     @JsonDeserialize
     private String bookAuthor;
     
     @Transient
+    @JsonInclude
     @JsonSerialize
     @JsonDeserialize
     private String bookDescription;
 
     @Transient
+    @JsonInclude
     @JsonSerialize
     @JsonDeserialize
     private Float bookPrice;
